@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content%}
+{%if no_faces%}
+<div class="container">
+  <div class="logo text-center mb-3"><img src="{% static 'images/logo1.png'%}" alt="Logo" ></div>
+  <hr />
+  <div class="alert alert-danger">
+    No faces detected. Cannot process the video.
+  </div>
+</div>
+{%else%}
+<div class="container">
+  <div class="logo text-center mb-3"><img src="{% static 'images/logo1.png'%}" alt="Logo" ></div>
+  <hr />
+
+  <h3>Frames Split</h3>
+  <div id="preprocessed_images" class="col-12 mt-4 mb-2">
+    {% for each_image in preprocessed_images %}
+    <img src="{%static each_image%}" class="preprocess" width=auto height="250" />
+    {%endfor%}
+  </div>
+
+
+  <h3>Face Cropped Frames</h3>
+  <div id="faces_images" class="col-12 mb-2">
+    {% for each_image in faces_cropped_images %}
+    <img src="{%static each_image%}" class="faces" width=auto height="150" />
+    {%endfor%}
+  </div>
+
+  <div class="result text-center">
+    <h3>Play to see Result</h3>
+    <video height="320" width="640" id="predict-media" controls>
+      <source src="{{MEDIA_URL}}{{original_video}}" type="video/mp4" codecs="avc1.4d002a" />
+    </video>
+    {%if output == "REAL" %}
+    <h4 class="mx-auto">Result: <span style="color:green">{{output}}</span>
+      <img src="{% static 'images/thumpup.png'%}" alt="real" height="100px" width=auto>
+      {%else%}
+      <h4 class="mx-auto">Result: <span style="color:red">{{output}}</span>
+        <img src="{% static 'images/thumpdown.png'%}" alt="fake" height="100px" width=auto >
+      {%endif%}
+  </div>
+<!--
+  <h3>Heat Maps</h3>
+  <div id="heatmap_images" class="col-12 mb-4 ">
+    {% for each_heatmap_image in heatmap_images %}
+    <img src="{%static each_heatmap_image%}" class="heat-map" width="100" height="150" />
+    {%endfor%}
+  </div>
+</div>
+-->
+{%endif%}
+{%endblock%}
+{%block js_cripts%}
+<script src="{%static 'js/face-api.min.js'%}"></script>
+<script>
+  $(document).ready(function () {
+    const video = document.getElementById("predict-media");
+
+    Promise.all([
+    faceapi.nets.ssdMobilenetv1.loadFromUri('/static/json'),
+      faceapi.nets.tinyFaceDetector.loadFromUri("/static/json")
+      
+    ])
+
+    var detectionTimeout;
+    video.addEventListener("playing", () => {
+      var canvas;
+      if ($('canvas').length < 1) {
+        canvas = faceapi.createCanvasFromMedia(video);
+        canvas.style.top = video.offsetTop + "px";
+        canvas.style.left = video.offsetLeft + "px";
+        document.body.append(canvas);
+      }
+      /* In order to be able to pause the video */
+      const displaySize = { width: video.width, height: video.height - 60 };
+      faceapi.matchDimensions(canvas, displaySize);
+
+      detectionTimeout = setInterval(async () => {
+        const detections = await faceapi.detectAllFaces(video);
+        const resizedDetections = faceapi.resizeResults(detections, displaySize);
+        canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+        canvas.style.top = video.offsetTop + "px";
+        canvas.style.left = video.offsetLeft + "px";
+        resizedDetections.forEach((result, i) => {
+          console.log(resizedDetections[i].box);
+          var result = '{{output}}';
+          var confidence = '{{confidence}}';
+          var drawOptions = {label: result.concat("  " , confidence , "%")};
+          if (result == 'REAL'){
+            drawOptions["boxColor"] = "#0f0";
+          }
+          else if (result == 'FAKE'){
+            drawOptions["boxColor"] = "#f00";
+          }
+          var box = { x: resizedDetections[i].box.x, y: resizedDetections[i].box.y, height: 100, width: 100 };
+          const drawBox = new faceapi.draw.DrawBox(box, drawOptions);
+          drawBox.draw(canvas);
+        });
+      }, 1);
+    });
+
+    video.addEventListener("paused", () => {
+      clearTimeout(detectionTimeout);
+    });
+  })
+</script>
+{%endblock%}
