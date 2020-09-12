@@ -44,11 +44,3 @@ For e.g. if you deploy it to a machine with IP 8.8.8.8 & the domain assigned to 
 `ALLOWED_HOSTS = ['8.8.8.8', 'example.com']`
 
 <b>Note:</b> This is only required when DEBUG is False.
-
-## FAQs
-
-<p>How to change the logo?</p>
-<p>Ans. Change the file located in <b>Project (root) -> static -> images -> logo.jpg</b></p>
-
-<p>Where are my navigation links?</p>
-<p>Ans. Links are present in <b>Project (root) -> templates -> nav-bar.html</b> and <b>Project (root) -> templates -> footer.html</b></p>
