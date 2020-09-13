@@ -23,7 +23,7 @@ Deepfake_detection_using_deep_learning
    
 ## 3. System Architecture
 
-![](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/System%20Architectur.png)
+![](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/System%20Architecture.png)
 
       
 ## 4. Our Results
@@ -36,3 +36,17 @@ Deepfake_detection_using_deep_learning
 |model_90_acc_60_frames_final_data.pt | 6000| 60 |90.59097 |
 |model_91_acc_80_frames_final_data.pt | 6000 | 80 | 91.49818 |
 |model_93_acc_100_frames_final_data.pt| 6000 | 100 | 93.58794|
+
+## 5. Contributors
+   1. [Abhijit Jadhav](https://www.linkedin.com/in/abhijitjadhav1998/)
+   2. [Jay Patel](https://www.linkedin.com/in/jay-patel-396408155/)
+   3. [Hitendra Patil](https://www.linkedin.com/in/hitendra-patil-95852613a/)
+   4. [Abhishek Patange](https://www.linkedin.com/in/abhishek-patange-691406155/)
+   
+   ***If you need any help regarding the please contact us. We will be happy to help***
+
+## 6. License
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+
