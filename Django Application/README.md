@@ -1,4 +1,4 @@
-# Steps to run Django project
+# Deep fake detection Django Application
 
 ## Requirements:
 
