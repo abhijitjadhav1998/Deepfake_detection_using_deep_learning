@@ -2,18 +2,19 @@
 
 ## Requirements:
 
-You can find the list of requirements in requirements.txt. Main requirements are listed below:
+You can find the list of requirements in [requirements.txt](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/Django%20Application/requirements.txt). Main requirements are listed below:
 
-Python >= v3.6<br/>
+```
+Python >= v3.6
 Django >= v3.0
+```
 
 ## Directory Structure
 
-ml_app -> Directory containing code in views.py file
-project_settings -> Contains Django settings and files to run in production
-static -> Contains all css, js and json files (for face-api)
-templates -> Template files for HTML
-
+- ml_app -> Directory containing code in views.py file
+- project_settings -> Contains Django settings and files to run in production
+- static -> Contains all css, js and json files (for face-api)
+- templates -> Template files for HTML
 
 <b>Note:</b> Before running the project make sure you have created directories namely <strong>models, uploaded_images, uploaded_videos</strong> in the project root and that you have proper permissions to access them.
 
@@ -21,36 +22,29 @@ templates -> Template files for HTML
 1. Copy your trained model to the models folder.
    - You can download our trained models from the [Google Drive](https://drive.google.com/drive/folders/1UX8jXUXyEjhLLZ38tcgOwGsZ6XFSLDJ-?usp=sharing) or you can train your models using the steps mentioned in Model Creation directory.
 
-### Step 1: Create virtualenv
+### Step 1 : Clone the repo and Navigate to Django Application
+
+`git clone https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning.git`
+
+### Step 2: Create virtualenv (optional)
 
 `python -m venv venv`
 
-### Step 2: Activate virtualenv
+### Step 3: Activate virtualenv (optional)
 
-### Step 3: Install requirements
+`venv\Scripts\activate`
+
+### Step 4: Install requirements
 
 `pip install requirements.txt`
 
-### Step 4: Copy Models
+### Step 5: Copy Models
 
-`Copy your trained model to the models folder Django i.e Applicatiion/models`
+`Copy your trained model to the models folder i.e Django Application/models/`
 
 - You can download our trained models from [Google Drive](https://drive.google.com/drive/folders/1UX8jXUXyEjhLLZ38tcgOwGsZ6XFSLDJ-?usp=sharing)
 
-### Step 5: Run project
+### Step 6: Run project
 
 `python manage.py runserver`
 
-#### IMPORTANT: 
-
-i. By default the server will run on PORT 8000 but you change that by passing the port in command line argument. 
-
-ii. Change the DEBUG value to False present <strong>project_settings -> settings.py </strong> before putting into production.
-
-iii. Add your IP/Domain to ALLOWED_HOSTS in settings.py when it is deployed to a server.
-
-For e.g. if you deploy it to a machine with IP 8.8.8.8 & the domain assigned to that machine is example.com then it should look like this
-
-`ALLOWED_HOSTS = ['8.8.8.8', 'example.com']`
-
-<b>Note:</b> This is only required when DEBUG is False.
