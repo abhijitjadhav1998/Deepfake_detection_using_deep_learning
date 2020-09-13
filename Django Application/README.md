@@ -17,6 +17,10 @@ templates -> Template files for HTML
 
 <b>Note:</b> Before running the project make sure you have created directories namely <strong>models, uploaded_images, uploaded_videos</strong> in the project root and that you have proper permissions to access them.
 
+## Prerequisite
+1. Copy your trained model to the models folder.
+   - You can download our trained models from the [Google Drive](https://drive.google.com/drive/folders/1UX8jXUXyEjhLLZ38tcgOwGsZ6XFSLDJ-?usp=sharing) or you can train your models using the steps mentioned in Model Creation directory.
+
 ### Step 1: Create virtualenv
 
 `python -m venv venv`
@@ -27,7 +31,13 @@ templates -> Template files for HTML
 
 `pip install requirements.txt`
 
-### Step 4: Run project
+### Step 4: Copy Models
+
+`Copy your trained model to the models folder Django i.e Applicatiion/models`
+
+- You can download our trained models from [Google Drive](https://drive.google.com/drive/folders/1UX8jXUXyEjhLLZ38tcgOwGsZ6XFSLDJ-?usp=sharing)
+
+### Step 5: Run project
 
 `python manage.py runserver`
 
