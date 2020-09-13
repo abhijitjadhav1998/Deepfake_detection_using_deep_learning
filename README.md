@@ -42,6 +42,8 @@ Deepfake_detection_using_deep_learning
    2. [Jay Patel](https://www.linkedin.com/in/jay-patel-396408155/)
    3. [Hitendra Patil](https://www.linkedin.com/in/hitendra-patil-95852613a/)
    4. [Abhishek Patange](https://www.linkedin.com/in/abhishek-patange-691406155/)
+   
+   ***If you need any help regarding the please contact us. We will be happy to help***
 
 ## 6. License
 
