@@ -50,5 +50,9 @@ Django >= v3.0
 
 ## Demo 
 ### You can watch the [youtube video](https://www.youtube.com/watch?v=_q16aJTXVRE&t=823s) for demo
-![](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/fakegif.gif)
+<p align="center">
+  <img src="https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/fakegif.gif" />
+</p>
+
+   ***If you need any help regarding the please contact us. We will be happy to help***
 
