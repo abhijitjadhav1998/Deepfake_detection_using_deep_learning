@@ -22,12 +22,17 @@ Deepfake_detection_using_deep_learning
    - This directory consists of all the documentation done during the project
    
 ## 3. System Architecture
-
-![](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/System%20Architecture.png)
+<p align="center">
+  <img src="https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/System%20Architecture.png" />
+</p>
 
 ## 4. Demo 
 ### You can watch the [youtube video](https://www.youtube.com/watch?v=_q16aJTXVRE&t=823s) for demo
-![](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/fakegif.gif)      
+
+<p align="center">
+  <img src="https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/fakegif.gif" />
+</p>
+
 ## 5. Our Results
 
 | Model Name | No of videos | No of Frames | Accuracy |
