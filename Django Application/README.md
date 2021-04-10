@@ -38,7 +38,7 @@ Django >= v3.0
 
 ### Step 4: Install requirements
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 ### Step 5: Copy Models
 
