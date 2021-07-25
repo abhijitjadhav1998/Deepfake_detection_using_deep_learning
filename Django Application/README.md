@@ -1,5 +1,5 @@
 # Deep fake detection Django Application
-### Please reach out to me on [LinkedIn](https://www.linkedin.com/in/abhijitjadhav1998/) for Step by Step installation links.
+### Please reach out to me on [LinkedIn](https://www.linkedin.com/in/abhijitjadhav1998/) for Step by Step installation YouTube video links.
 ## Requirements:
 
 **Note :** Nvidia GPU is mandatory to run the application.
