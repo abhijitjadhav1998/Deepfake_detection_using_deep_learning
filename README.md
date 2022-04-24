@@ -67,7 +67,7 @@ Deepfake_detection_using_deep_learning
 
 ## 8. We welcome Open Source Contribution. 
 ### Below are the some changes that can be applied to the project. New Ideas will be appreciated.
-- [X] ~~~Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs~~~ : not possible as dlib uses CUDA internally
+- [X] ~~Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs~~ : not possible as dlib uses CUDA internally
 - [ ] Deploying the applications in free cloud and creating open source API for detection
 - [ ] Dockerizing the app
 - [ ] Batch processing of entire video instead of processing first 'x' frames.
