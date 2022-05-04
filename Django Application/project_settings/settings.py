@@ -95,7 +95,7 @@ USE_TZ = False
 #used in production to serve static files
 STATIC_ROOT = "/home/app/staticfiles/"
 
-
+#url for static files
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
