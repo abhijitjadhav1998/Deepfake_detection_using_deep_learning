@@ -18,7 +18,7 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__
 SECRET_KEY = '@)0qp0!&-vht7k0wyuihr+nk-b8zrvb5j^1d@vl84cd1%)f=dz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Change and set this to correct IP/Domain
 ALLOWED_HOSTS = ["*"]
