@@ -233,10 +233,14 @@ def index(request):
                 return render(request, index_template_name, {"form": video_upload_form})
             
             saved_video_file = 'uploaded_file_'+str(int(time.time()))+"."+video_file_ext
-            with open(os.path.join(settings.PROJECT_DIR, 'uploaded_videos', saved_video_file), 'wb') as vFile:
-                shutil.copyfileobj(video_file, vFile)
-
-            request.session['file_name'] = os.path.join(settings.PROJECT_DIR, 'uploaded_videos', saved_video_file)
+            if settings.DEBUG:
+                with open(os.path.join(settings.PROJECT_DIR, 'uploaded_videos', saved_video_file), 'wb') as vFile:
+                    shutil.copyfileobj(video_file, vFile)
+                request.session['file_name'] = os.path.join(settings.PROJECT_DIR, 'uploaded_videos', saved_video_file)
+            else:
+                with open(os.path.join(settings.PROJECT_DIR, 'uploaded_videos','app','uploaded_videos', saved_video_file), 'wb') as vFile:
+                    shutil.copyfileobj(video_file, vFile)
+                request.session['file_name'] = os.path.join(settings.PROJECT_DIR, 'uploaded_videos','app','uploaded_videos', saved_video_file)
             request.session['sequence_length'] = sequence_length
             return redirect('ml_app:predict')
         else:
@@ -252,6 +256,10 @@ def predict_page(request):
             sequence_length = request.session['sequence_length']
         path_to_videos = [video_file]
         video_file_name = video_file.split('\\')[-1]
+        if settings.DEBUG == False:
+            production_video_name = video_file_name.split('/')[3:]
+            production_video_name = '/'.join([str(elem) for elem in production_video_name])
+            print("Production file name",production_video_name)
         video_file_name_only = video_file_name.split('.')[0]
         video_dataset = validation_dataset(path_to_videos, sequence_length=sequence_length,transform= train_transforms)
         model = Model(2).cuda()
@@ -283,7 +291,11 @@ def predict_page(request):
             image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             img = pImage.fromarray(image, 'RGB')
             image_name = video_file_name_only+"_preprocessed_"+str(i)+'.png'
-            image_path = os.path.join(settings.PROJECT_DIR, 'uploaded_images', image_name)
+            if settings.DEBUG:
+                image_path = os.path.join(settings.PROJECT_DIR, 'uploaded_images', image_name)
+            else:
+                print("image_name",image_name)
+                image_path = "/home/app/staticfiles" + image_name
             img.save(image_path)
             preprocessed_images.append(image_name)
         print("<=== | Videos Splitting Done | ===>")
@@ -307,7 +319,10 @@ def predict_page(request):
 
             img = pImage.fromarray(image, 'RGB')
             image_name = video_file_name_only+"_cropped_faces_"+str(i)+'.png'
-            image_path = os.path.join(settings.PROJECT_DIR, 'uploaded_images', video_file_name_only+"_cropped_faces_"+str(i)+'.png')
+            if settings.DEBUG:
+                image_path = os.path.join(settings.PROJECT_DIR, 'uploaded_images', video_file_name_only+"_cropped_faces_"+str(i)+'.png')
+            else:
+                image_path = "/home/app/staticfiles" + image_name
             img.save(image_path)
             faces_found = faces_found + 1
             faces_cropped_images.append(image_name)
@@ -336,8 +351,10 @@ def predict_page(request):
                     output = "FAKE"
                 print("Prediction : " , prediction[0],"==",output ,"Confidence : " , confidence)
                 print("--- %s seconds ---" % (time.time() - start_time))
-
-            return render(request, predict_template_name, {'preprocessed_images': preprocessed_images, 'heatmap_images': heatmap_images, "faces_cropped_images": faces_cropped_images, "original_video": video_file_name, "models_location": models_location, "output": output, "confidence": confidence})
+            if settings.DEBUG:
+                return render(request, predict_template_name, {'preprocessed_images': preprocessed_images, 'heatmap_images': heatmap_images, "faces_cropped_images": faces_cropped_images, "original_video": video_file_name, "models_location": models_location, "output": output, "confidence": confidence})
+            else:
+                return render(request, predict_template_name, {'preprocessed_images': preprocessed_images, 'heatmap_images': heatmap_images, "faces_cropped_images": faces_cropped_images, "original_video": production_video_name, "models_location": models_location, "output": output, "confidence": confidence})
         except:
             return render(request, 'cuda_full.html')
 def about(request):

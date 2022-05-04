@@ -1,0 +1,37 @@
+# Ignore a file or directory in the context root named "modules"
+venv
+
+# Ignore any files or directories within the subdirectory named "modules" 
+# in the context root
+venv/*
+
+# Ignore any files or directories in the context root beginning with "modules"
+venv*
+
+# Ignore any files or directories one level down from the context root named
+# "modules"
+*/venv
+
+# Ignore any files or directories at any level, including the context root, 
+# named modules
+**/venv
+
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+# Python
+__pycache__
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycache__/
+app/*/*/*/__pycache__/
+.env/
+.venv/
+venv/
+
+# Local PostgreSQL data
+data/
