@@ -70,7 +70,8 @@ Deepfake_detection_using_deep_learning
 
 ## 8. We welcome Open Source Contribution. 
 ### Below are the some changes that can be applied to the project. New Ideas will be appreciated.
-- [ ] Deploying the applications in free cloud and creating open source API for detection
+- [ ] Deploying the applications in free cloud 
+- [ ] Creating open source API for detection
 - [ ] Batch processing of entire video instead of processing first 'x' frames.
 #### Completed 
 - [X] Dockerizing the app
