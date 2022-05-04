@@ -3,6 +3,9 @@
 ## Star⭐ this repo 😉 and Follow me on<a href="https://github.com/abhijitjadhav1998/">  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
+## Latest Update
+#### We have dockerised the [Django Application](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/tree/master/Django%20Application) now you can spin up a container within seconds without worring about dependencies
+
 
 ## 1. Introduction
 This projects aims in detection of video deepfakes using deep learning techniques like ResNext and LSTM. We have achived deepfake detection by using transfer learning where the pretrained ResNext CNN is used to obtain a feature vector, further the LSTM layer is trained using the features. For more details follow the [documentaion](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/tree/master/Documentation).
@@ -67,10 +70,11 @@ Deepfake_detection_using_deep_learning
 
 ## 8. We welcome Open Source Contribution. 
 ### Below are the some changes that can be applied to the project. New Ideas will be appreciated.
-- [X] ~~Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs~~ : not possible as dlib uses CUDA internally
 - [ ] Deploying the applications in free cloud and creating open source API for detection
-- [ ] Dockerizing the app
 - [ ] Batch processing of entire video instead of processing first 'x' frames.
+#### Completed 
+- [X] Dockerizing the app
+- [X] ~~Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs~~ : not possible as dlib uses CUDA internally
 
 ## 9. Dont foget to Star⭐ this repo 😉 and Follow me on<a href="https://github.com/abhijitjadhav1998/">  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
 </a>
