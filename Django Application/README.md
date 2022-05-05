@@ -36,7 +36,7 @@ docker run -p 80:80 --volumes-from deepfakeapplication -v static_volume:/home/ap
 
 ### Step 5: Star⭐ this repo 😉 on <a href="https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning" >  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a> and   Star⭐ this image on <a href="https://hub.docker.com/repository/docker/abhijitjadhav1998/deefake-detection-20framemodel">  <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" /> </a>
 
-Please note that currently we have only pushed the image of 20 Frames model, If you can to create your own image of other frames model follow the steps given in the blog.
+Please note that currently we have only pushed the image of 20 Frames model, If you can to create your own image of other frames model follow the steps given in the [blog](https://abhijithjadhav.medium.com/dockerise-deepfake-detection-django-application-using-nvidia-cuda-40cdda3b6d38).
 
 # Running application locally on your machine
 
