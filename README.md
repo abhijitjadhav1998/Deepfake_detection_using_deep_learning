@@ -73,6 +73,7 @@ Deepfake_detection_using_deep_learning
 - [ ] Deploying the applications in free cloud 
 - [ ] Creating open source API for detection
 - [ ] Batch processing of entire video instead of processing first 'x' frames.
+- [ ] Optimizing the code for faster execution.
 #### Completed 
 - [X] Dockerizing the app
 - [X] ~~Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs~~ : not possible as dlib uses CUDA internally
