@@ -1,7 +1,6 @@
 # Deepfake detection using Deep Learning (ResNext and LSTM)
 
-## Star⭐ this repo 😉 and Dont forget to  <a href="https://www.buymeacoffee.com/abhijitjadhav" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>. If you are from India buy me a coffee at abhijit.jadhav1@ybl
-
+## Star⭐ this repo 😉 and Dont forget to  <a href="https://www.buymeacoffee.com/abhijitjadhav" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a> <a href="" target="_blank"><img src="https://img.shields.io/badge/UPI-abhijit.jadhav1%40ybl-brightgreen" alt="Medium" /></a>&nbsp;
 
 </a>
 
