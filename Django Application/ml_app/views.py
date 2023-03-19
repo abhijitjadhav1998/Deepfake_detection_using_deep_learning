@@ -31,6 +31,10 @@ mean=[0.485, 0.456, 0.406]
 std=[0.229, 0.224, 0.225]
 sm = nn.Softmax()
 inv_normalize =  transforms.Normalize(mean=-1*np.divide(mean,std),std=np.divide([1,1,1],std))
+if torch.cuda.is_available():
+    device = 'gpu'
+else:
+    device = 'cpu'
 
 train_transforms = transforms.Compose([
                                         transforms.ToPILImage(),
@@ -129,7 +133,7 @@ def im_plot(tensor):
 
 
 def predict(model,img,path = './', video_file_name=""):
-  fmap,logits = model(img.to('cpu'))
+  fmap,logits = model(img.to(device))
   img = im_convert(img[:,-1,:,:,:], video_file_name)
   params = list(model.parameters())
   weight_softmax = model.linear1.weight.detach().cpu().numpy()
@@ -140,7 +144,7 @@ def predict(model,img,path = './', video_file_name=""):
   return [int(prediction.item()),confidence]
 
 def plot_heat_map(i, model, img, path = './', video_file_name=''):
-  fmap,logits = model(img.to('cpu'))
+  fmap,logits = model(img.to(device))
   params = list(model.parameters())
   weight_softmax = model.linear1.weight.detach().cpu().numpy()
   logits = sm(logits)
@@ -266,7 +270,7 @@ def predict_page(request):
         model_name = os.path.join(settings.PROJECT_DIR,'models', get_accurate_model(sequence_length))
         models_location = os.path.join(settings.PROJECT_DIR,'models')
         path_to_model = os.path.join(settings.PROJECT_DIR, model_name)
-        model.load_state_dict(torch.load(path_to_model,map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load(path_to_model,map_location=torch.device(device)))
         model.eval()
         start_time = time.time()
         # Start: Displaying preprocessing images
