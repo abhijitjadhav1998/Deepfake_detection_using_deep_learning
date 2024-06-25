@@ -74,6 +74,7 @@ Deepfake_detection_using_deep_learning
    2. Jay Patel
    3. Hitendra Patil
    4. Abhishek Patange
+   5. Vishwesh Thonte 
    
 ## 7. License
 
