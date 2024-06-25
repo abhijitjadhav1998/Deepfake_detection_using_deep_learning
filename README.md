@@ -57,6 +57,15 @@ Deepfake_detection_using_deep_learning
 |model_93_acc_100_frames_final_data.pt| 6000 | 100 | 93.58794|
 
 ## 6. Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
    1. Abhijit Jadhav
    2. Jay Patel
    3. Hitendra Patil
