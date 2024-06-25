@@ -1,7 +1,4 @@
 # Deepfake detection using Deep Learning (ResNext and LSTM)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Give a Star⭐ to repo and Don't forget to <a href="https://www.buymeacoffee.com/abhijitjadhav" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 35px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a> 
 
@@ -61,8 +58,6 @@ Deepfake_detection_using_deep_learning
 
 ## 6. Contributors
 
-## Contributors
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -87,11 +82,10 @@ Deepfake_detection_using_deep_learning
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-
-   1. Abhijit Jadhav
-   2. Jay Patel
-   3. Hitendra Patil
-   4. Abhishek Patange
+#### 6.1 Offline Contributors
+   1. Jay Patel
+   2. Hitendra Patil
+   3. Abhishek Patange
    
 ## 7. License
 
@@ -105,6 +99,6 @@ Deepfake_detection_using_deep_learning
 - [ ] Optimizing the code for faster execution.
 #### Completed 
 - [X] Dockerizing the app
-- [X] ~~Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs~~ : not possible as dlib uses CUDA internally
+- [X] Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs
 
 ## 9. Dont forget to Star⭐ this repo 😉 and  <a href="https://www.buymeacoffee.com/abhijitjadhav" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 35px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a> 
