@@ -58,6 +58,8 @@ Deepfake_detection_using_deep_learning
 
 ## 6. Contributors
 
+## Contributors
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -66,6 +68,8 @@ Deepfake_detection_using_deep_learning
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+
    1. Abhijit Jadhav
    2. Jay Patel
    3. Hitendra Patil
