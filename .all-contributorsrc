@@ -15,6 +15,15 @@
       "contributions": [
         "projectManagement"
       ]
+    },
+    {
+      "login": "vthonte",
+      "name": "Vishwesh Thonte",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43621438?v=4",
+      "profile": "http://vthonte.vercel.app/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
