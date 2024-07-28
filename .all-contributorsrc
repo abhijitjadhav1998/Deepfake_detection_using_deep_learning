@@ -1,0 +1,35 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "abhijitjadhav1998",
+      "name": "Abhijit Jadhav",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38549908?v=4",
+      "profile": "https://www.linkedin.com/in/abhijitjadhav1998/",
+      "contributions": [
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "vthonte",
+      "name": "Vishwesh Thonte",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43621438?v=4",
+      "profile": "http://vthonte.vercel.app/",
+      "contributions": [
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "Deepfake_detection_using_deep_learning",
+  "projectOwner": "abhijitjadhav1998"
+}
